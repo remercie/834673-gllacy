@@ -61,7 +61,7 @@ a {
 
 .site-navigation a {
   color: #ffffff;
-  text-decoration: solid underline;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .site-navigation a:hover,
@@ -139,9 +139,7 @@ a {
 .header-search:hover,
 .header-search:focus,
 .header-login:hover,
-.header-login:focus,
-.basket-button-amount:hover,
-.basket-button-amount:focus {
+.header-login:focus {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -155,23 +153,34 @@ a {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.forborder {
-  font: inherit;
-  font-weight: 700;
-  border: 1px solid #b2b2b2;
+.forborder input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
-.forborder:hover,
+.forborder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  outline: 1px solid #b2b2b2;
+}
+
+.forborder:hover {
+  font: inherit;
+  outline: 2px solid #9a9a9a;
+}
+
 .forborder:focus {
   font: inherit;
-  border: 2px solid #9a9a9a;
+  outline: 2px solid #b2d0ef;
 }
 
 .forborder:active {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  border: 1px solid #b2b2b2;
+  outline: 2px solid #b2d0ef;
 }
 
 ::-webkit-input-placeholder {
@@ -277,13 +286,19 @@ a {
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
-  text-decoration: solid underline;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .product-item:hover,
 .product-item:focus {
   background-color: #9bafa3;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.product-item-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .product-item-img,
@@ -378,7 +393,7 @@ a {
   line-height: 18px;
   color: #ffffff;
   font-weight: 400;
-  text-decoration: solid underline;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .standarts .suppliers {
@@ -394,7 +409,7 @@ a {
 
 .course-link {
   color: #ffffff;
-  text-decoration: solid underline;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .course-link:hover,
@@ -422,6 +437,14 @@ a {
   font-weight: 400;
 }
 
+.basket-button-full {
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+
 .basket-table-price {
   color: #999999;
 }
@@ -441,7 +464,7 @@ a {
   line-height: 16px;
   font-weight: 400;
   color: #ffffff;
-  text-decoration: solid underline;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .breadcrumbs-link:hover,
@@ -451,7 +474,7 @@ a {
 }
 
 .breadcrumbs-current {
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .catalog-header {
@@ -483,9 +506,10 @@ a {
   background-color: #ffffff;
 }
 
-.filter-radio-label {
+.filter-radio-label,
+.filter-checkbox-label {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 18px;
   font-weight: 500;
   color: #ffffff;
 }
@@ -499,7 +523,7 @@ a {
 
 .filter-button {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 18px;
   font-weight: 500;
   color: #ffffff;
   border: 2px solid #ffffff;
@@ -543,4 +567,14 @@ a {
 .paginator-link:active {
   color: #323232;
   background-color: #ffffff;
+}
+
+.paginator-arrow .paginator-prev::before {
+  content: url("../img/svg-gllacy/icon-right-small.svg");
+  transform: scale(-1, 1);
+  position: absolute;
+}
+
+.paginator-arrow .paginator-next::before {
+  content: url("../img/svg-gllacy/icon-right-small.svg");
 }
